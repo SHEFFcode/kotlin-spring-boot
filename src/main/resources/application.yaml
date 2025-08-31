@@ -12,11 +12,31 @@ spring:
     properties:
       hibernate:
         format_sql: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+  security:
+    user:
+      name: testuser
+      password: testpass
+
+
+
 
 server:
   port: 8080
+  error:
+    include-stacktrace: never
+    include-message: always
+    include-binding-errors: always
+
 
 logging:
   level:
     com.sheffmachine.kotlinbootproject: DEBUG
-    org.hibernate.SQL: DEBUG
+    org.springframework.web: WARN
+    org.springframework.security: WARN
+    org.hibernate.SQL: WARN
+
