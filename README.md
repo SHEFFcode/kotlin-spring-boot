@@ -17,3 +17,12 @@
    chmod +x scripts/test-api.sh
    ./scripts/test-api.sh
 ```
+4. Run Tests
+```bash
+./gradlew test
+
+./gradlew unitTest
+
+./gradlew test jacocoTestReport
+
+```
